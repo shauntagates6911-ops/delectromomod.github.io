@@ -38,6 +38,65 @@
       <button class="cat-btn" data-cat="sensing"><span>Cyan</span> Sensing (8)</button>
       <button class="cat-btn" data-cat="delectromo"><span>⚡️</span> Delectromo Web/GPU (10)</button>
     </aside>
+    <!-- 🧱 SIDEBAR EXTENSION BUTTON (Add to the bottom of <aside class="category-sidebar">) -->
+<button id="openExtensionsBtn" class="add-extension-btn">
+  <span class="ext-icon">🧩</span>
+  <span class="ext-label">Add Extension</span>
+</button>
+
+<!-- 🎆 EXTENSION GALLERY MODAL -->
+<div id="extensionModal" class="modal-overlay hidden">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>⚡️ DelectromoMod Extension Gallery</h2>
+      <button id="closeModalBtn" class="close-btn">✖</button>
+    </div>
+    <p class="modal-subtext">Choose an extension to inject custom high-voltage blocks into your project!</p>
+    
+    <div class="extension-grid">
+      <!-- 🌐 EXTENSION 1 -->
+      <div class="extension-card" data-ext="json">
+        <div class="ext-banner bg-cyan">🌐</div>
+        <div class="ext-info">
+          <h3>Web API & JSON</h3>
+          <p>Fetch real-time data, parse payloads, and connect external REST endpoints.</p>
+          <button class="load-ext-btn" onclick="loadExtension('json')">Inject Extension ⚡️</button>
+        </div>
+      </div>
+
+      <!-- 🎮 EXTENSION 2 -->
+      <div class="extension-card" data-ext="gamepad">
+        <div class="ext-banner bg-purple">🎮</div>
+        <div class="ext-info">
+          <h3>Gamepad & Input</h3>
+          <p>Connect Xbox, PlayStation, and custom controller mappings directly to sprites.</p>
+          <button class="load-ext-btn" onclick="loadExtension('gamepad')">Inject Extension ⚡️</button>
+        </div>
+      </div>
+
+      <!-- 🖼️ EXTENSION 3 -->
+      <div class="extension-card" data-ext="gpu">
+        <div class="ext-banner bg-magenta">🎆</div>
+        <div class="ext-info">
+          <h3>Full Stage GPU Shader Effects</h3>
+          <p>Apply real-time CSS filters, hue shifting, blur, and neon bloom to the stage.</p>
+          <button class="load-ext-btn" onclick="loadExtension('gpu')">Inject Extension ⚡️</button>
+        </div>
+      </div>
+
+      <!-- 🏎️ EXTENSION 4 -->
+      <div class="extension-card" data-ext="physics">
+        <div class="ext-banner bg-gold">🏎️</div>
+        <div class="ext-info">
+          <h3>Physics & Unbounded Collisions</h3>
+          <p>Advanced velocity, gravity, acceleration, and no-fencing spatial math.</p>
+          <button class="load-ext-btn" onclick="loadExtension('physics')">Inject Extension ⚡️</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
     <!-- BLOCK PALETTE -->
     <main class="block-palette">
