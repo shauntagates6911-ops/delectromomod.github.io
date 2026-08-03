@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DelectromoMod Auth — Developer Portal</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=JetBrains+Mono:wght@500;800&display=swap" rel="stylesheet" />
+</head>
+<body class="auth-body">
+
+  <div class="auth-card-container">
+    <!-- ⚡️ LOGO HEADER -->
+    <div class="auth-header">
+      <div class="auth-logo">⚡️</div>
+      <h1>Delectromo<span class="highlight">Auth</span></h1>
+      <p class="auth-subtitle">Unlock unlimited cloud data, project hosting, & custom extensions!</p>
+    </div>
+
+    <!-- 🔀 TAB SWITCHER -->
+    <div class="auth-tabs">
+      <button id="tabLogin" class="tab-btn active" onclick="switchAuthTab('login')">Sign In</button>
+      <button id="tabRegister" class="tab-btn" onclick="switchAuthTab('register')">Register</button>
+    </div>
+
+    <!-- 🔑 LOGIN FORM -->
+    <form id="loginForm" class="auth-form">
+      <div class="input-group">
+        <label for="loginUser">Scratcher / Developer Username</label>
+        <input type="text" id="loginUser" placeholder="e.g. SparkModder99" required />
+      </div>
+      <div class="input-group">
+        <label for="loginPass">Password</label>
+        <input type="password" id="loginPass" placeholder="••••••••••••" required />
+      </div>
+      <button type="submit" class="auth-submit-btn primary-btn">Launch Workspace 🚀</button>
+    </form>
+
+    <!-- 📝 REGISTER FORM (HIDDEN BY DEFAULT) -->
+    <form id="registerForm" class="auth-form hidden">
+      <div class="input-group">
+        <label for="regUser">Choose Username</label>
+        <input type="text" id="regUser" placeholder="e.g. DelectromoKing" required />
+      </div>
+      <div class="input-group">
+        <label for="regEmail">Developer Email (Optional)</label>
+        <input type="email" id="regEmail" placeholder="modder@delectromo.io" />
+      </div>
+      <div class="input-group">
+        <label for="regPass">Create Password</label>
+        <input type="password" id="regPass" placeholder="••••••••••••" required />
+      </div>
+      <button type="submit" class="auth-submit-btn register-btn">Create Developer Account ⚡️</button>
+    </form>
+
+    <div class="auth-footer">
+      <a href="index.html" class="back-link">← Back to Home Hub</a>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>
