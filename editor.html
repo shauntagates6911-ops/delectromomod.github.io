@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DelectromoMod Editor — 63 Core Blocks</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=JetBrains+Mono:wght@500;800&display=swap" rel="stylesheet" />
+</head>
+<body class="editor-body">
+
+  <!-- ⚡️ EDITOR TOOLBAR -->
+  <header class="editor-toolbar">
+    <div class="logo-container">
+      <span class="logo-icon">⚡️</span>
+      <span class="logo-text">Delectromo<span class="highlight">Editor</span></span>
+    </div>
+
+    <!-- 🛠️ ENGINE CONTROLS -->
+    <div class="toolbar-actions">
+      <button id="toggleFencingBtn" class="tool-btn toggle-active">🤺 Fencing: OFF</button>
+      <button id="restoreSpriteBtn" class="tool-btn restore-btn">🎯 Restore / Recenter Sprite</button>
+      <button id="fpsToggleBtn" class="tool-btn">⚡️ 60 FPS</button>
+      <button id="exportJsonBtn" class="tool-btn primary-btn">💾 Export Mod JSON</button>
+    </div>
+  </header>
+
+  <!-- 🧱 MAIN WORKSPACE -->
+  <div class="editor-workspace">
+    
+    <!-- CATEGORY SIDEBAR -->
+    <aside class="category-sidebar">
+      <button class="cat-btn active" data-cat="motion"><span>🔵</span> Motion (10)</button>
+      <button class="cat-btn" data-cat="looks"><span>🟣</span> Looks (10)</button>
+      <button class="cat-btn" data-cat="sound"><span>Magenta</span> Sound (8)</button>
+      <button class="cat-btn" data-cat="events"><span>🟡</span> Events (8)</button>
+      <button class="cat-btn" data-cat="control"><span>🟠</span> Control (9)</button>
+      <button class="cat-btn" data-cat="sensing"><span>Cyan</span> Sensing (8)</button>
+      <button class="cat-btn" data-cat="delectromo"><span>⚡️</span> Delectromo Web/GPU (10)</button>
+    </aside>
+
+    <!-- BLOCK PALETTE -->
+    <main class="block-palette">
+      <div class="palette-header">
+        <h3 id="categoryTitle">🔵 Motion Blocks</h3>
+        <span class="block-count" id="blockCountBadge">10 Blocks Loaded</span>
+      </div>
+      <div id="paletteBlocksContainer" class="blocks-grid">
+        <!-- 63 Blocks dynamically injected here -->
+      </div>
+    </main>
+
+    <!-- STAGE PREVIEW CANVAS -->
+    <aside class="stage-preview-panel">
+      <div class="stage-header">
+        <span>🎮 Stage Canvas</span>
+        <span class="stage-stats">FPS: 60 | Sprites: 1</span>
+      </div>
+      <div class="canvas-wrapper">
+        <canvas id="delectromoStage" width="480" height="360"></canvas>
+      </div>
+      <div class="stage-tools">
+        <button id="greenFlagBtn" class="flag-btn">🚩 Run</button>
+        <button id="stopSignBtn" class="stop-btn">🛑 Stop</button>
+      </div>
+    </aside>
+
+  </div>
+
+  <script src="js/editor.js"></script>
+</body>
+</html>
